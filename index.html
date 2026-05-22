@@ -21,38 +21,35 @@
       </a>
       <span class="top-pill">ABM para ISP</span>
     </header>
-
     <section class="home-grid shell">
       <div class="home-copy reveal">
         <span class="eyebrow">SVA de saúde para provedores</span>
         <h1>Escolha a persona. Abra a tese. Convença com <span>valor percebido.</span></h1>
         <p>Uma home em formato de slide: sem formulário, sem distração. Cada botão abre uma landing própria, com narrativa direta para o decisor do provedor.</p>
-        <div class="actions">
-          <button class="btn btn-primary" data-open="ceo">Começar pelo CEO</button>
-          <a class="btn btn-white" href="#personaDock">Ver personas</a>
-        </div>
+        <div class="actions"><button class="btn btn-primary" data-open="ceo">Começar pelo CEO</button><a class="btn btn-white" href="#personaDock">Ver personas</a></div>
       </div>
-
       <div class="hero-stage reveal" aria-hidden="true">
-        <div class="phone-mock"><span>YouSafer Saúde</span></div>
-        <div class="mascot mascot-home"><span></span></div>
-        <div class="float-card f1"><b>Retenção</b><small>valor percebido</small></div>
-        <div class="float-card f2"><b>SVA Saúde</b><small>uso real</small></div>
-        <div class="float-card f3"><b>ISP</b><small>menos guerra de preço</small></div>
-        <div class="float-card f4"><b>WhatsApp</b><small>jornada simples</small></div>
+        <div class="phone-mock"><span>YouSafer Saúde</span></div><div class="mascot mascot-home"><span></span></div>
+        <div class="float-card f1"><b>Retenção</b><small>valor percebido</small></div><div class="float-card f2"><b>SVA Saúde</b><small>uso real</small></div><div class="float-card f3"><b>ISP</b><small>menos guerra de preço</small></div><div class="float-card f4"><b>WhatsApp</b><small>jornada simples</small></div>
       </div>
     </section>
-
-    <nav id="personaDock" class="persona-dock" aria-label="Selecione uma persona">
-      <button data-open="ceo">CEO / Dono</button>
-      <button data-open="comercial">Comercial / Growth</button>
-      <button data-open="cs">CS / Retenção</button>
-      <button data-open="financeiro">Financeiro / ROI</button>
-      <button data-open="tecnico">Técnico / Integração</button>
-    </nav>
+    <nav id="personaDock" class="persona-dock" aria-label="Selecione uma persona"><button data-open="ceo">CEO / Dono</button><button data-open="comercial">Comercial / Growth</button><button data-open="cs">CS / Retenção</button><button data-open="financeiro">Financeiro / ROI</button><button data-open="tecnico">Técnico / Integração</button></nav>
   </main>
-
   <main id="personaRoot" class="persona-root" aria-live="polite"></main>
-  <script src="app.js"></script>
+<script>
+const personas={
+ceo:{name:'CEO / Dono',word:'CRESCIMENTO',tag:'Margem e direção',headline:'Você não precisa vencer no menor preço. Precisa fazer sua base perceber mais valor.',lead:'Você sabe que desconto segura hoje e destrói margem amanhã. A YouSafer entra como SVA de saúde para transformar cuidado em diferenciação, retenção e defesa de receita recorrente.',cards:['Proteja margem sem depender de desconto','Crie uma narrativa difícil de copiar','Transforme saúde em valor mensal','Defenda receita antes do churn'],steps:['Você enquadra saúde como diferencial estratégico do provedor.','Sua base passa a enxergar benefício além da conexão.','Seu time ganha uma oferta mais forte para retenção e upgrade.'],cta:'Quero avaliar para minha base'},
+comercial:{name:'Comercial / Growth',word:'VENDAS',tag:'Argumento de venda',headline:'Pare de vender só mega, preço e instalação. Venda algo que o cliente entende na vida real.',lead:'Para vender melhor, seu ISP precisa de um argumento que saia da comparação óbvia. A YouSafer adiciona saúde à proposta e ajuda seu comercial a conversar sobre valor, cuidado e permanência.',cards:['Mais repertório para quebrar objeção','Campanhas mais fortes para novos planos','Menos dependência de desconto','Oferta mais consultiva e memorável'],steps:['Você tira a conversa do preço por mega.','Você conecta internet com benefício de uso real.','Você cria um motivo mais forte para o cliente escolher e ficar.'],cta:'Quero fortalecer minha oferta'},
+cs:{name:'CS / Retenção',word:'RETENÇÃO',tag:'Base engajada',headline:'Seu cliente só lembra do provedor no boleto ou quando abre suporte? Isso precisa mudar.',lead:'Retenção começa antes do pedido de cancelamento. Com a YouSafer, seu provedor aparece de forma positiva na rotina do cliente, oferecendo saúde, conveniência e cuidado como benefício percebido.',cards:['Mais motivos para permanecer','Relacionamento além do boleto','Benefício útil no dia a dia','Comunicação positiva com a base'],steps:['Você identifica segmentos com maior risco ou oportunidade.','Ativa comunicação clara do SVA de saúde.','Transforma o benefício em vínculo e não só item de contrato.'],cta:'Quero melhorar retenção'},
+financeiro:{name:'Financeiro / ROI',word:'ROI',tag:'Receita preservada',headline:'A melhor receita é aquela que você deixa de perder todos os meses.',lead:'Churn corrói caixa, aquisição e previsibilidade. A YouSafer ajuda você a defender receita recorrente com uma camada de valor percebido que atua antes da comparação virar preço.',cards:['Defesa de receita recorrente','Menos CAC perdido recompondo base','Mais previsibilidade comercial','Tese clara de custo versus churn'],steps:['Você mede onde a base perde valor percebido.','Aplica um SVA com utilidade real para reduzir sensibilidade a preço.','Acompanha impacto em retenção, upgrades e permanência.'],cta:'Quero analisar ROI'},
+tecnico:{name:'Técnico / Integração',word:'INTEGRAÇÃO',tag:'Operação simples',headline:'Um SVA só escala se não virar complexidade para a operação.',lead:'Você precisa de uma solução que o cliente entenda e que a operação consiga sustentar. A YouSafer prioriza jornada simples, comunicação clara e ativação guiada para o ISP.',cards:['Jornada simples para o usuário final','Menos fricção operacional','Ativação fácil de comunicar','Benefício claro, não enfeite no contrato'],steps:['Você define a oferta e os pontos de contato.','A jornada é comunicada de forma simples, com foco em WhatsApp.','O time acompanha adesão e dúvidas sem transformar tudo em suporte pesado.'],cta:'Quero entender integração'}};
+const home=document.getElementById('home'),root=document.getElementById('personaRoot'),logo=document.querySelector('.logo').innerHTML;
+function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function highlight(t){return t.replace('valor','<span class="accent">valor</span>').replace('preço','<span class="accent">preço</span>')}
+function observe(){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}
+function openPersona(id){const p=personas[id];if(!p)return;home.classList.add('hidden');root.classList.add('active');const cards=p.cards.map((c,i)=>'<article class="info-card"><b>0'+(i+1)+'</b><h3>'+esc(c)+'</h3></article>').join('');const steps=p.steps.map((s,i)=>'<div class="step reveal"><strong>0'+(i+1)+'</strong><p>'+esc(s)+'</p></div>').join('');root.innerHTML='<div class="route-top"><button class="back" data-home>← Voltar</button><a class="route-logo" data-home href="#home">'+logo+'</a></div><section class="persona-hero" data-word="'+esc(p.word)+'"><div class="persona-shell"><div class="persona-main reveal"><div><span class="eyebrow">'+esc(p.tag)+'</span><h1>'+highlight(esc(p.headline))+'</h1><p class="lead">'+esc(p.lead)+'</p><div class="actions"><a class="btn btn-primary" href="#diagnostico">'+esc(p.cta)+'</a><a class="btn btn-white" href="#story">Ver lógica</a></div></div><div class="persona-stage"><div class="phone-mock"><span>YouSafer Saúde</span></div><div class="mascot"><span></span></div><div class="hud hud-a"><b>SVA Saúde</b><small>benefício com uso real</small></div><div class="hud hud-b"><b>ISP</b><small>valor além da conexão</small></div><div class="hud hud-c"><b>YouSafer</b><small>retenção + diferenciação</small></div></div></div><div class="cards reveal">'+cards+'</div><div class="mock-grid reveal"><article class="panel panel-blue"><h2>Por que isso convence?</h2><p>Porque a conversa deixa de ser genérica. Você fala com a dor real da persona, conecta saúde com impacto operacional e mostra uma tese simples: quando o cliente percebe mais valor, ele compara menos por preço.</p></article><article class="panel panel-green"><h2>SVA que aparece na vida real.</h2><p>Consultas, telemedicina, exames, medicamentos e jornada simples. A proposta não é parecer maior: é ser lembrada pela base.</p></article></div></div></section><section class="story" id="story"><div class="story-grid"><div><span class="eyebrow">Storytelling da decisão</span><h2>Da guerra de preço para valor percebido.</h2></div><div class="steps">'+steps+'</div></div></section><section class="form-section" id="diagnostico"><div class="form-card"><div><span class="eyebrow">Próximo passo</span><h2>Vamos adaptar para o seu provedor?</h2><p>Preencha os dados para simular como a YouSafer pode entrar na sua estratégia comercial, de retenção e diferenciação.</p></div><form class="form"><input placeholder="Nome"><input type="email" placeholder="E-mail"><input placeholder="Telefone"><input placeholder="Empresa / ISP"><input placeholder="Quantidade de assinantes"><select><option>Principal desafio hoje</option><option>Retenção</option><option>Comercial</option><option>Diferenciação</option><option>Financeiro / ROI</option><option>Integração</option></select><button>'+esc(p.cta)+'</button></form></div></section>';root.querySelectorAll('[data-home]').forEach(e=>e.addEventListener('click',goHome));root.querySelector('form').addEventListener('submit',e=>e.preventDefault());history.pushState({persona:id},'', '#'+id);scrollTo(0,0);observe()}
+function goHome(e){if(e)e.preventDefault();root.classList.remove('active');root.innerHTML='';home.classList.remove('hidden');history.pushState(null,'','#home');scrollTo(0,0);observe()}
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>openPersona(b.dataset.open)));addEventListener('mousemove',e=>{let px=e.clientX/innerWidth-.5,py=e.clientY/innerHeight-.5;document.querySelectorAll('.float-card,.hud').forEach((el,i)=>{el.style.transform='translate('+(px*(8+i*2))+'px,'+(py*(8+i*2))+'px)'})});addEventListener('popstate',()=>{const id=location.hash.replace('#','');if(personas[id])openPersona(id);else goHome()});observe();const initial=location.hash.replace('#','');if(personas[initial])openPersona(initial);
+</script>
 </body>
 </html>
